@@ -80,7 +80,7 @@
     for re-intimating the compiler that exceptions are being handled. The throws need to be used in the function’s signature and also 
     while invoking the method that raises checked exceptions.
     
-**9. What is the use of the finalize method?
+**9. What is the use of the finalize method ?**
 
     finalize() method is a protected and non-static method of java.lang.Object class. This method will be available in all objects you create in java. 
     This method is used to perform some final operations or clean up operations on an object before it is removed from the memory. 
@@ -190,6 +190,27 @@
     transient is a variables modifier used in serialization. At the time of serialization, if we don’t want to save value of a particular 
     variable in a file, then we use transient keyword. When JVM comes across transient keyword, it ignores original value of the variable 
     and save default value of that variable data type.
+    
+**22. Data Types in Java(Primitve and Non-Primitive(Reference type)) ?**
+
+    1. Primitive Data Types: 
+    A primitive data type is pre-defined by the programming language. The size and type of variable values are specified, and it has no additional methods.
+
+    2.Non-Primitive Data Types: 
+    These data types are not actually defined by the programming language but are created by the programmer. 
+    They are also called “reference variables” or “object references” since they reference a memory location which stores the data.
+    
+    Primitive Data Types
+    Data types in Java are classified into 4 aspects as int, float, character and boolean. But, in general, there are 8 data types. They are as follows:
+
+    boolean data type
+    byte data type
+    char data type
+    short data type
+    int data type
+    long data type
+    float data type
+    double data type
     
     
     
