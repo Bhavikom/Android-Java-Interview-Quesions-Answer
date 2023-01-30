@@ -106,7 +106,7 @@
 
     simply use keyword final in definition of class or methods. 
     
-**12. why access to the non-static variable is not allowed from static method in Java?
+**12. why access to the non-static variable is not allowed from static method in Java ?**
 
     because non-static variable are associated with a specific instance of an object while static is not associated with any instance.
     
@@ -365,6 +365,44 @@
      And if the objects are unequal, it usually returns different hash values.
      Syntax:
      public int hashCode() 
+     
+**35. What are these final, finally and finalize keywords ?**
+
+     1.final is a keyword in the java language. It is used to apply restrictions on class, method and variable. 
+     Final class can't be inherited, final method can't be overridden and final variable value can't be changed.
+     class FinalExample {
+        public static void main(String[] args) {
+         final int x=100;
+         x=200;//Compile Time Error because x is final
+        }
+     }
+     
+     2.finally is a code block and is used to place important code, it will be executed whether exception is handled or not.
+     class FinallyExample {
+     public static void main(String[] args) {
+        try {
+            int x=300;
+        }catch(Exception e) {
+            System.out.println(e.getMessage());            }
+        finally {
+            System.out.println("finally block is executed");
+        }
+       }
+     }
+     
+     3.Finalize is a method used to perform clean up processing just before object is garbage collected.
+     class FinalizeExample {
+        public void finalize() {
+           System.out.println("finalize called");
+        }
+        public static void main(String[] args) {
+          FinalizeExample f1=new FinalizeExample();
+          FinalizeExample f2=new FinalizeExample();
+          f1=null;
+          f2=null;
+          System.gc();
+        }
+    }
      
 
  
