@@ -276,7 +276,7 @@
     or precision loss,     widening (int j -> long k) does not require an explicit cast, because there can be no data loss 
     (long can take larger numbers than int allows).
     
-**30. Do objects get passed by reference or value in Java? Elaborate on that. **
+**30. Do objects get passed by reference or value in Java? Elaborate on that. ?**
 
     In Java all primitives and objects are passed by value, meaning that their copy will be manipulated in the receiving method. 
     But there is a caveat - when you pass an object reference into a method, a copy of this reference is made, so it still points to the same object. 
