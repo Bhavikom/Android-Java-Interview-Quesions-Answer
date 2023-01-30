@@ -52,12 +52,9 @@
 **4. Object scopes ?**
 
     public , protected , default (no modifier) , private
+    
+![image](https://user-images.githubusercontent.com/35212651/215474184-86540b0a-c658-4b49-8366-13f13b579af7.png)
 
-    Modifier	             Package	 Subclass	  World
-    Public	               Yes	     Yes	      Yes
-    protected	             Yes	     Yes	      No
-    Default (no modifier)	 Yes	     No 	      No
-    private	               No	       No	        No
     
 **5. Override private methods, possible ?**
 
