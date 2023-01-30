@@ -337,7 +337,37 @@
      Once an object is no longer referenced and therefore is not reachable by the application code, the garbage collector removes it and 
      reclaims the unused memory.
      
-**33. 
+**33. Difference Between Checked and Unchecked Exceptions in Java ?**
+
+     A checked exception is caught at compile time whereas a runtime or unchecked exception is, as it states, at runtime.
+     A checked exception must be handled either by re-throwing or with a try catch block, whereas an unchecked isn’t required to be handled.
+     A runtime exception is a programming error and is fatal whereas a checked exception is an exception condition within your code’s 
+     logic and can be recovered or re-tried from.
+
+**34. What is the hashCode() and equals() used for ?**
+
+     The equals() and hashcode() are the two important methods provided by the Object class for comparing objects. 
+     Since the Object class is the parent class for all Java objects, hence all objects inherit the default implementation of these two methods. 
+     
+     1. Java equals()
+     The java equals() is a method of lang.Object class, and it is used to compare two objects.
+     To compare two objects that whether they are the same, it compares the values of both the object's attributes.
+     By default, two objects will be the same only if stored in the same memory location.
+     Syntax:
+     public boolean equals(Object obj)  
+     
+     2. Java hashcode()
+     A hashcode is an integer value associated with every object in Java, facilitating the hashing in hash tables.
+     To get this hashcode value for an object, we can use the hashcode() method in Java. It is the means hashcode() method that returns 
+     the integer hashcode value of the given object.
+     Since this method is defined in the Object class, hence it is inherited by user-defined classes also.
+     The hashcode() method returns the same hash value when called on two objects, which are equal according to the equals() method. 
+     And if the objects are unequal, it usually returns different hash values.
+     Syntax:
+     public int hashCode() 
+     
+
+ 
 
     
     
