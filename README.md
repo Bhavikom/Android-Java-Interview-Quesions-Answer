@@ -196,11 +196,6 @@
     1. Primitive Data Types: 
     A primitive data type is pre-defined by the programming language. The size and type of variable values are specified, and it has no additional methods.
 
-    2.Non-Primitive Data Types: 
-    These data types are not actually defined by the programming language but are created by the programmer. 
-    They are also called “reference variables” or “object references” since they reference a memory location which stores the data.
-    
-    Primitive Data Types
     Data types in Java are classified into 4 aspects as int, float, character and boolean. But, in general, there are 8 data types. They are as follows:
 
     boolean data type
@@ -211,6 +206,116 @@
     long data type
     float data type
     double data type
+    
+    2.Non-Primitive Data Types: 
+    
+    These data types are not actually defined by the programming language but are created by the programmer. 
+    They are also called “reference variables” or “object references” since they reference a memory location which stores the data.
+    
+    Non-Primitive data types refer to objects and hence they are called reference types. 
+    Examples of non-primitive types include Strings, Arrays, Classes, Interface, etc.
+    
+**23. Difference between primitive and non-primitive data types ?**
+
+    1. Primitive types are predefined in Java. Non-primitive types are created by the programmer and is not defined by Java.
+    2. Non Primitive types can be used to call methods to perform certain operations, while primitive types cannot.
+    3. A primitive type always has a value, whereas non-primitive types can be null.
+    4. A primitive type starts with a lowercase letter, while non-primitive types start with an uppercase letter.
+    5. The size of a primitive type depends on the data type, while non-primitive types have all the same size.
+    
+**24. What is the difference between an Integer and int ?**
+
+    int is a primitive data type (with boolean, byte, char, short, long, float and double), while Integer (with Boolean, Byte, Character, 
+    Short,Long, Float and Double) is a wrapper class that encapsulates primitive data type, while providing useful methods to perform different tasks with it.
+    
+**25. What does it means to say that a String is immutable ?**
+
+    It means that once created, String object's char[] (its' containing value) is declared final and, therefore, it can not be changed during runtime.
+    
+**26. How is String class implemented? Why was it made immutable?
+
+    There is no primitive variant of String class in Java language - all strings are just wrappers around underlying array of characters, 
+    which is declared final. This means that, once a String object is instantiated, it cannot be changed through normal tools of the 
+    language (Reflection still can mess things up horribly, because in Java no object is truly immutable). This is why String variables
+    in classes are the first candidates to be used, when you want to override hashCode() and equals() of your class - you can be sure, 
+    that all their required contracts will be satisfied.
+
+    Note: The String class is immutable, so that once it is created a String object cannot be changed. The String class has a number of methods, 
+    some of which will be discussed below, that appear to modify strings. Since strings are immutable, what these methods really do is 
+    create and return a new string that contains the result of the operation. (Official Java Documentation)
+
+    This class is also unique in a sense, that, when you create an instance like this:
+
+    String helloWorld = "Hello, World!";
+    "Hello, World!" is called a literal and compiler creates a String object with its' value. So
+
+    String capital = "Hello, World!".toUpperCase();
+    is a valid statement, that, firstly, will create an object with literal value "Hello, World!" and then will create and return 
+    another object with value "HELLO, WORLD!"
+
+    String was made immutable to prevent malicious manipulation of data, when, for example, user login or other sensitive data is being send to a server.
+    
+**27. What is String.intern()? When and why should it be used ?**
+
+    String.intern() is used to mange memory in Java code. It is used when we have duplicates value in different strings. When you call the String.intern(), 
+    then if in the String pool that string is present then the equals() method will return true and it will return that string only.
+    
+**28. What is Autoboxing and Unboxing ?**
+
+    Autoboxing and Unboxing is the process of automatic wrapping (putting in a box) and unwrapping (getting the value out) of primitive data types, 
+    that have "wrapper" classes. So int and Integer can (almost always) be used interchangeably in Java language, meaning a method void 
+    giveMeInt(int i) { ... } can take int as well as Integer as a parameter.
+    
+**29. Typecast in Java ?**
+
+    In Java, you can use casts to polymorph one class into another, compatible one. For example:
+    long i = 10l;
+    int j = (int) i;
+    long k = j;
+    Here we see, that, while narrowing (long i -> int j) requires an explicit cast to make sure the programmer realizes, that there may be some data
+    or precision loss,     widening (int j -> long k) does not require an explicit cast, because there can be no data loss 
+    (long can take larger numbers than int allows).
+    
+**30. Do objects get passed by reference or value in Java? Elaborate on that. **
+
+    In Java all primitives and objects are passed by value, meaning that their copy will be manipulated in the receiving method. 
+    But there is a caveat - when you pass an object reference into a method, a copy of this reference is made, so it still points to the same object. 
+    This means, that any changes that you make to the insides of this object are retained, when the method exits.
+    public class Pointer {
+    	int innerField;
+    	public Pointer(int a) {
+        	this.innerField = a;
+    	}
+    }
+    public class ValueAndReference {
+	public static void main(String[] args) {
+        	Pointer a = new Pointer(0);
+        	int b = 1;
+        	print("Before:");
+        	print("b = " + b);
+        	print("a.innerField = " + a.innerField);
+        	exampleMethod(a, b);
+        	print("After:");
+        	print("b = " + b);
+        	print("a.innerField = " + a.innerField);
+    	}
+    	static void exampleMethod(Pointer a, int b) {
+        	a.innerField = 2;
+        	b = 10;
+    	}
+    	static void print(String text) {
+        	System.out.println(text);
+    	}
+    }
+    Will output:
+     Before:
+     b = 1
+     a.innerField = 0
+     After:
+     b = 1        // a new local int variable was created and operated on, so "b" didn't change
+     a.innerField = 2 // Pointer a got its' innerField variable changed
+                     //  from 0 to 2, because method was operating on
+                     //  the same reference to an instance
     
     
     
