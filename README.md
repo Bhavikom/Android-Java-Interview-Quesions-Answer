@@ -316,6 +316,29 @@
      a.innerField = 2 // Pointer a got its' innerField variable changed
                      //  from 0 to 2, because method was operating on
                      //  the same reference to an instance
+		     
+**31. What the difference between local, instance and class variables ?**
+
+     Local variables exist only in methods that created them, they are stored separately in their respected Thread Stack 
+     (for more information, see question about Java Memory Model) and cannot have their reference passed outside of the method scope.
+     That also means that they cannot be assigned any access modifier or made static - because they only exist during enclosing method's 
+     execution and those modifiers just do not make sense, since no other outside method can get them anyway.
+     
+     Instance variables are the ones, that are declared in classes and their value can be different from one instance of the class to another, 
+     but they always require that class' instance to exist.
+     
+     Class variables are those, that are marked with static keyword in their class' body. They can only have one value across all 
+     instances of that class (changing it in one place will change it in their class and, therefore, in all instances) and can even be 
+     retrieved without that class' instance (if their access modifier allows it).
+     
+**32. What is garbage collector? How does it work ?**
+
+     All objects are allocated on the heap area managed by the JVM. As long as an object is being referenced, the JVM considers it alive. 
+     Once an object is no longer referenced and therefore is not reachable by the application code, the garbage collector removes it and 
+     reclaims the unused memory.
+     
+**33. 
+
     
     
     
