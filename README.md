@@ -506,7 +506,44 @@
    Here, an object of the anonymous class is created dynamically when we need to override the display() method.
    Anonymous classes also help us to make our code concise.
    
-**40. 
+**40. Explain Memory Leak in Java ?**
+
+   Java provides out-of-box memory management. When we create an object using the new keyword, the JVM automatically allocates memory for that object. 
+   If the object is no longer is used by the application, the garbage collector automatically removes that object and free up space for other applications. 
+   Therefore, the programmer need not to manage memory manually like other procedural programming languages (C, and C++). Nevertheless, 
+   there is a chance of memory leak in a Java application. In this section, we will understand what is a memory leak in Java, its causes, 
+   detect and fixing of memory leaks.
+
+   *What is memory leak in Java?
+   In Java, the memory leak is a situation when the garbage collector does not recognize the unused objects and they remain in the memory 
+   indefinitely that reduces the amount of memory allocated to the application. Because the unused objects still being referenced that may 
+   lead to OutOfMemoryError. It also affects the reliability of the application. 
+   
+   *Causes of Memory Leaks
+   
+    There are the following causes of memory leaks in Java:
+
+    1.Using Unwanted Object Reference: These are the object references that are no longer needed. The garbage collector is failed to 
+    reclaim the memory because another object still refers to that unwanted object.
+    
+    2.Using Long-live Static Objects: Using static objects also leads to a memory leak. Because they live in the memory till the application's life span.
+    
+    3.Failure to Clean-up Native System Resources: Native system resources allocated by a function external to Java. It is written in C and C++. JNI APIs are used to       embed native libraries in the Java code.
+    
+    4.Bugs in the Third-party Libraries: Bugs in AWT and Java Swing packages are another cause of memory leak.
+    
+    *Preventing Memory Leak
+    
+    While writing code, remember the following points that prevent the memory leak in Java.
+
+    1.Do not create unnecessary objects.
+    2.Avoid String Concatenation.
+    3.Use String Builder.
+    4.Do not store a massive amount of data in the session.
+    5.Time out the session when no longer used.
+    6.Do not use the System.gc() method.
+    7.Avoid the use of static objects. Because they live for the entire life of the application, by default. So, it is better to set the reference to null, explicitly.
+    8.Always close the ResultSet, Statements, and Connection objects in the finally block.
      
 
  
