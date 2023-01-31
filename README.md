@@ -494,6 +494,19 @@
    Output :-
    Inside an anonymous class.
    In the above example, we have created an anonymous class that implements the Polygon interface.
+   
+**39. Advantages of Anonymous Classes ?**
+
+   In anonymous classes, objects are created whenever they are required. That is, objects are created to perform some specific tasks. For example,
+   Object = new Example() {
+      public void display() {
+          System.out.println("Anonymous class overrides the method display().");
+      }
+   };
+   Here, an object of the anonymous class is created dynamically when we need to override the display() method.
+   Anonymous classes also help us to make our code concise.
+   
+**40. 
      
 
  
