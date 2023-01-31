@@ -419,7 +419,81 @@
     Fail-safe iterator will not throw any exception even if the collection is modified while iteration over it. 
     But in Fail-safe iterator, it throws a ConcurrentModificationException when you try to modify the collection while using it.
     
-**38. 
+**38. What is Java Anonymous Class ?**
+
+    In Java, a class can contain another class known as nested class. It's possible to create a nested class without giving any name.
+
+    A nested class that doesn't have any name is known as an anonymous class.
+
+    An anonymous class must be defined inside another class. Hence, it is also known as an anonymous inner class. Its syntax is:
+
+    class outerClass {
+        // defining anonymous class
+        object1 = new Type(parameterList) {
+        // body of the anonymous class
+        };
+    }
+    Anonymous classes usually extend subclasses or implement interfaces.
+    Here, Type can be
+    
+    a superclass that an anonymous class extends
+    an interface that an anonymous class implements
+    The above code creates an object, object1, of an anonymous class at runtime.
+
+    Note: Anonymous classes are defined inside an expression. So, the semicolon is used at the end of anonymous classes to indicate the end of the expression.
+    
+    Example 1: Anonymous Class Extending a Class
+    class Polygon {
+        public void display() {
+           System.out.println("Inside the Polygon class");
+        }
+    }
+    class AnonymousDemo {
+        public void createClass() {
+        // creation of anonymous class extending class Polygon
+        Polygon p1 = new Polygon() {
+           public void display() {
+              System.out.println("Inside an anonymous class.");
+          }
+        };
+        p1.display();
+       }
+   }
+   class Main {
+       public static void main(String[] args) {
+          AnonymousDemo an = new AnonymousDemo();
+          an.createClass();
+       }
+   }
+
+   Output : Inside an anonymous class.
+   
+   Example 2: Anonymous Class Implementing an Interface
+
+   interface Polygon {
+      public void display();
+   }
+      class AnonymousDemo {
+        public void createClass() {
+        // anonymous class implementing interface
+        Polygon p1 = new Polygon() {
+          public void display() {
+            System.out.println("Inside an anonymous class.");
+          }
+        };
+        p1.display();
+      }
+   }
+   class Main {
+      public static void main(String[] args) {
+         AnonymousDemo an = new AnonymousDemo();
+         an.createClass();
+      }
+   }
+
+   Output :-
+   Inside an anonymous class.
+   In the above example, we have created an anonymous class that implements the Polygon interface.
      
 
  
