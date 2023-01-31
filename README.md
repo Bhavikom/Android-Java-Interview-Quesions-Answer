@@ -544,7 +544,87 @@
     6.Do not use the System.gc() method.
     7.Avoid the use of static objects. Because they live for the entire life of the application, by default. So, it is better to set the reference to null, explicitly.
     8.Always close the ResultSet, Statements, and Connection objects in the finally block.
+    
+**41. What are the differences between a SparseArray and Hashmap ?**
+
+    Sparse arrays can be used to replace hash maps when the key is an Integer or a Long (HashMap <Integer, V>).
+    is made to be memory efficient than using the regular HashMap
+    It is generally slower than a traditional HashMap
+    
+**42. What are the differences between a LinkedList vs ArrayList ?**
+
+    two different implementations of the List interface
+    LinkedList implements it with a doubly-linked list.
+    ArrayList implements it with a dynamically re-sizing array.
+    LinkedList is better for working with stacks mostly, or when working with buffers.
+    ArrayList is best for working with indexes.
+    
+**43. What is the difference between HashSet, HashMap and Hashtable? How do they behave in a multi-threaded environment?
+
+    1. Hashtable
+       Hashtable is basically a data structure to retain values of key-value pair.
+
+       It does not allow null for both key and value. It will throw NullPointerException.
+       Hashtable does not maintain insertion order. The order is defined by the Hash function. So only use this if you do not need data in order.
+       It is synchronized. It is slow. Only one thread can access in one time.
+       HashTable rea thread safe.
+       HashTable uses Enumerator to iterate through elements.
+       Hashtable<Integer,String>; myTable = new Hashtable<Integer,String>();
+
+       myTable.put(1, "John");
+       myTable.put(2, "Cena");
+       myTable.put(3, null); /* NullPointerEcxeption at runtime*/
+
+       System.out.println(myTable.get(1));
+       System.out.println(myTable.get(2));
+       System.out.println(myTable.get(3));
+
+    2.HashMap
+
+       Like Hashtable it also accepts key value pair.
+
+       It allows null for both key and value.
+       HashMap does not maintain insertion order. The order is defined by the Hash function.
+       It is not synchronized. It will have better performance.
+       HashMap are not thread safe, but you can use Collections.synchronizedMap(new HashMap<K,V>())
+       HashMap<Integer,String> myMap = new HashMap<Integer,String>();
+
+       myMap.put(1, "First");
+       myMap.put(2,"Second");
+       myMap.put(3, null);
+       
+    3.HashSet
+    
+       HashSet does not allow duplicate values.
+       It provides add method rather put method.
+       You also use its contain method to check whether the object is already available in HashSet. HashSet can be used where you want 
+       to maintain a unique list.
+
+       HashSet<String> mySet = new HashSet<String>();
+       mySet.add ("First");
+       mySet.add ("Second");
+       mySet.add ("Third");
+       if(mySet.contains("First")){
+          System.out.println("The Set already contains First");
+       }
      
+**44. What is a Deadlock In java ?**
+
+    Deadlock describes a situation where two or more threads are blocked forever, waiting for each other.
+    
+**45. How we can avoid Deadlocks ?**
+
+    Breaking circular wait condition: In order to do that, you can make arrangements in the code to impose the ordering on acquisition and release of locks.
+    
+    Avoid Nested Locks: This is the most common reason for deadlocks, avoid locking another resource if you already hold one. 
+    It’s almost impossible to get a deadlock     situation if you are working with only one object lock.
+    
+    Lock Only What is Required: You should acquire lock only on the resources you have to work on, if we are only interested in one of its fields, 
+    then we should lock only that specific field, not complete object.
+    
+    Avoid waiting indefinitely: You can get a deadlock if two threads are waiting for each other to finish indefinitely using thread join. 
+    If your thread has to wait for another thread to finish, it’s always best to use join with the maximum time you want to wait for the thread to finish.
+
 
  
 
