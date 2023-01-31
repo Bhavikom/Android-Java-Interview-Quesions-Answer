@@ -403,6 +403,17 @@
           System.gc();
         }
     }
+    
+**36. Difference between StringBuffer and StringBuilder ?**
+
+    Java provides three classes to represent a sequence of characters: String, StringBuffer, and StringBuilder. 
+    The String class is an immutable class whereas StringBuffer and StringBuilder classes are mutable. 
+    There are many differences between StringBuffer and StringBuilder. The StringBuilder class is introduced since JDK 1.5.
+
+    A list of differences between StringBuffer and StringBuilder is given below:
+
+    ![image](https://user-images.githubusercontent.com/35212651/215666751-b3f801df-f61a-4757-988c-048aae4f4dd6.png)
+
      
 
  
