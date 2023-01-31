@@ -625,7 +625,74 @@
     Avoid waiting indefinitely: You can get a deadlock if two threads are waiting for each other to finish indefinitely using thread join. 
     If your thread has to wait for another thread to finish, it’s always best to use join with the maximum time you want to wait for the thread to finish.
 
+**46. What is the difference between a process and a thread in Java/Android ?**
 
+    1.A program in execution is often referred to as Process. A thread is a part of the process.
+    
+    2.A process consists of multiple threads. A thread is the smallest part of the process that can execute concurrently with other threads of the process.
+    
+    3.A process is sometimes referred to as “Task”. A thread is often referred to as a “Lightweight” process.
+    
+    4.A process has its own address space. A thread uses the process’s address space and shares it with the other threads of that process.
+    
+    5.A thread can communicate with other threads (of the same process) directly by using methods like wait(), notify(), notifyAll(). 
+    
+    6.A process can communicate with another process by using inter-process communication (IPC/AIDL).
+    
+    7.New threads are easily created. However, the creation of new processes requires duplication of the parent process.
+    
+    8.Threads have control over the other threads of the same process. A process does not have control over the sibling process, 
+    it has control over its child processes only.
+    
+**47. How do you manipulate strings in Java without creating String garbage ?**
+
+    Using StringBuilder and StringBuffer/StringBuilder
+    
+**48. In Java, does the finally block gets executed if we insert a return statement inside the try block of a try-catch-finally ?
+
+    Yes!
+    
+**49. Why are Array and ArrayList different? When would you use each ?**
+
+    Resizable: Array is static in size that is fixed length data structure, One can not change the length after creating the Array object. 
+    ArrayList is dynamic in size.
+    
+    Multi-dimensional: Array can be multi dimensional , while ArrayList is always single dimensional.
+    
+    Primitives: ArrayList can not contains primitive data types (like int , float , double) it can only contains Object while Array can 
+    contain both primitive data types as well as objects.
+    
+**50. What is a ThreadPool? Is it better than using several "simple" Threads ?**
+
+    ThreadPool: represents a group of worker threads that are waiting for the job and reuse many times.
+    Using ThreadPool minimizes the overhead due to thread creation. Thread objects use a significant amount of memory, 
+    and in a large-scale application, allocating and deallocating many thread objects creates a significant memory management overhead.
+    
+**51. What are transient and volatile modifiers ?**
+
+    transient: modifier tells the Java object serialization subsystem to exclude the field when serializing an instance of the class
+    
+    volatile: modifier tells the JVM that writes to the field should always be synchronously flushed to memory, and that reads of the field 
+    should always read from memory.
+    
+**52. What are the states of Thread in Java ?**
+
+    New, Runnable, Blocked, Waiting, TimedWaiting, Terminated.
+    
+**53. How to make object thread safe without synchronisation ?**
+
+    Make it immutable.
+    
+**54. Whether static method can use nonstatic members ?**
+   
+    NO
+    
+**55. Do objects get passed by reference or value in Java ?**
+
+    In Java all primitives and objects are passed by value, meaning that their copy will be manipulated in the receiving method. 
+    But there is a caveat - when you pass an object reference into a method, a copy of this reference is made, so it still points 
+    to the same object! This means, that any changes that you make inside this object are retained, when the method exits.
+  
  
 
     
