@@ -414,6 +414,12 @@
 
     ![image](https://user-images.githubusercontent.com/35212651/215666751-b3f801df-f61a-4757-988c-048aae4f4dd6.png)
 
+**37. What is the difference between fail-fast and fail-safe iterators in Java ?**
+
+    Fail-safe iterator will not throw any exception even if the collection is modified while iteration over it. 
+    But in Fail-safe iterator, it throws a ConcurrentModificationException when you try to modify the collection while using it.
+    
+**38. 
      
 
  
