@@ -692,7 +692,29 @@
     In Java all primitives and objects are passed by value, meaning that their copy will be manipulated in the receiving method. 
     But there is a caveat - when you pass an object reference into a method, a copy of this reference is made, so it still points 
     to the same object! This means, that any changes that you make inside this object are retained, when the method exits.
-  
+ 
+**56. Java Lambda Expressions ?**
+
+    Lambda Expressions were added in Java 8.
+
+    A lambda expression is a short block of code which takes in parameters and returns a value. 
+    Lambda expressions are similar to methods, but they do not need a name and they can be implemented right in the body of a method.
+    
+    Example
+    Use a lambda expression in the ArrayList's forEach() method to print every item in the list:
+
+    import java.util.ArrayList;
+
+    public class Main {
+  	public static void main(String[] args) {
+    	ArrayList<Integer> numbers = new ArrayList<Integer>();
+    	numbers.add(5);
+    	numbers.add(9);
+    	numbers.add(8);
+    	numbers.add(1);
+    	numbers.forEach( (n) -> { System.out.println(n); } );
+  	}
+    }
  
 
     
