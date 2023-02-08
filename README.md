@@ -813,7 +813,8 @@
 	
 	In Java, we rarely use Upcasting. We use it when we need to develop a code that deals with only the parent class. 
 	Downcasting is used when we need to develop a code that accesses behaviors of the child class.
-	![image](https://user-images.githubusercontent.com/35212651/217440525-ed8ebacc-22cc-4115-871f-1f60941579ad.png)
+	
+![image](https://user-images.githubusercontent.com/35212651/217440525-ed8ebacc-22cc-4115-871f-1f60941579ad.png)
 
 
  
