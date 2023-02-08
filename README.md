@@ -814,7 +814,16 @@
 	In Java, we rarely use Upcasting. We use it when we need to develop a code that deals with only the parent class. 
 	Downcasting is used when we need to develop a code that accesses behaviors of the child class.
                                                                "
-	![image](https://user-images.githubusercontent.com/35212651/217440279-1ef50c91-aa58-450b-af9a-6347cee91356.png)
+	
+	Upcasting	Downcasting
+A child object is typecasted to a parent object.	The reference of the parent class object is passed to the child class.
+We can perform Upcasting implicitly or explicitly.	Implicitly Downcasting is not possible.
+In the child class, we can access the methods and variables of the parent class.	The methods and variables of both the classes(parent and child) can be accessed.
+We can access some specified methods of the child class.	All the methods and variables of both classes can be accessed by performing downcasting.
+Parent p = new Parent()	"Parent p = new Child()
+Child c = (Child)p;                                                                 "
+![image](https://user-images.githubusercontent.com/35212651/217440525-ed8ebacc-22cc-4115-871f-1f60941579ad.png)
+
 
  
 
