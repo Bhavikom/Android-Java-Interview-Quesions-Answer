@@ -816,6 +816,12 @@
 	
 ![image](https://user-images.githubusercontent.com/35212651/217440525-ed8ebacc-22cc-4115-871f-1f60941579ad.png)
 
+**58. What is Collection in Java ?**
+
+	The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.
+	
+	Java Collections can achieve all the operations that you perform on a data such as searching, sorting, insertion, manipulation, and deletion.
+
 
  
 
