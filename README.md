@@ -821,8 +821,98 @@
 	The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.
 	
 	Java Collections can achieve all the operations that you perform on a data such as searching, sorting, insertion, manipulation, and deletion.
+	
+	Java Collection means a single unit of objects. Java Collection framework provides many interfaces (Set, List, Queue, Deque) 
+	and classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet).
+	
+	*What is a framework in Java
+	
+	It provides readymade architecture.
+	It represents a set of classes and interfaces.
+	It is optional.
+	
+	*What is Collection framework
+	
+	The Collection framework represents a unified architecture for storing and manipulating a group of objects. It has:
 
+	1.Interfaces and its implementations, i.e., classes
+	2.Algorithm
 
+**59. Java Non-generic Vs. Generic Collection ?**
+
+	Java collection framework was non-generic before JDK 1.5. Since 1.5, it is generic.
+
+	Java new generic collection allows you to have only one type of object in a collection. Now it is type-safe, so typecasting is not required at runtime.
+
+	Let's see the old non-generic example of creating a Java collection.
+
+	ArrayList list=new ArrayList();//creating old non-generic arraylist  
+	Let's see the new generic example of creating java collection.
+
+	ArrayList<String> list=new ArrayList<String>();//creating new generic arraylist  
+	
+	In a generic collection, we specify the type in angular braces. Now ArrayList is forced to have the only specified type of object in it. 
+	If you try to add another type of object, it gives a compile-time error.
+	
+**60. what is List Interface from collection in java ?**
+
+	List interface is the child interface of Collection interface. It inhibits a list type data structure in which we can store 
+	the ordered collection of objects. It can have duplicate values.
+
+	List interface is implemented by the classes ArrayList, LinkedList, Vector, and Stack.
+
+	To instantiate the List interface, we must use :
+
+	List <data-type> list1= new ArrayList();  
+	List <data-type> list2 = new LinkedList();  
+	List <data-type> list3 = new Vector();  
+	List <data-type> list4 = new Stack();  
+	There are various methods in List interface that can be used to insert, delete, and access the elements from the list.
+
+**61. ArrayList in Java ?**
+
+	Java ArrayList class uses a dynamic array for storing the elements. It is like an array, but there is no size limit. 
+	We can add or remove elements anytime. So, it is much more flexible than the traditional array. It is found in the java.util package. 
+	It is like the Vector in C++.
+
+	The ArrayList in Java can have the duplicate elements also. It implements the List interface so we can use all the methods 
+	of the List interface here. The ArrayList maintains the insertion order internally.
+
+	It inherits the AbstractList class and implements List interface.
+
+	The important points about the Java ArrayList class are:
+	
+	1.Java ArrayList class can contain duplicate elements.
+	2.Java ArrayList class maintains insertion order.
+	3.Java ArrayList class is non synchronized.
+	4.Java ArrayList allows random access because the array works on an index basis.
+	5.In ArrayList, manipulation is a little bit slower than the LinkedList in Java because a lot of shifting needs to occur 
+	  if any element is removed from the array list.
+	6.We can not create an array list of the primitive types, such as int, float, char, etc. It is required to use the required 
+	  wrapper class in such cases. For example:
+	  
+	  ArrayList<int> al = ArrayList<int>(); // does not work  
+	  ArrayList<Integer> al = new ArrayList<Integer>(); // works fine  
+	  
+	7.Java ArrayList gets initialized by the size. The size is dynamic in the array list, which varies according to the elements 
+	getting added or removed from the list.
+	
+	Java ArrayList Example
+	
+ 	public class ArrayListExample1{  
+ 		public static void main(String args[]){  
+  		ArrayList<String> list=new ArrayList<String>();//Creating arraylist    
+      		list.add("Mango");//Adding object in arraylist    
+      		list.add("Apple");    
+      		list.add("Banana");    
+      		list.add("Grapes");    
+      		//Printing the arraylist object   
+      		System.out.println(list);  
+ 		}  
+	}  
+
+	
+**61. 
  
 
     
