@@ -912,9 +912,33 @@
 	}  
 
 	
-**61. 
- 
+**61. differences between List and ArrayList in Java ?**
 
+	1.One of the major differences is that List is an interface and ArrayList is a class of Java Collection framework.
+	
+	2.The List extends the collection framework, comparatively ArrayList extends AbstractList class and implements the List interface.
+	
+	3.The namespace for the List and ArrayList is System.Collection.Generic and System Collection, respectively.
+	
+	4.List stores elements in a sequence and are identified by the individual index number. 
+	  Comparatively, ArrayList stores the elements in a dynamic array; it can grow when required.
+	  
+	5. When we define the List as follows:
+
+		List myList = new ArrayList();  
+		It means we can only call the methods and reference members from the List interface.
+
+		If we define the ArrayList as follows:
+
+		ArrayList myList = new ArrayList();  
+		It means we can invoke available methods in ArrayList and use its members in addition to the List.
+ 
+	6. List provides faster manipulation of objects where Arraylist provides slow manipulation on objects compared to List.
+	
+	7. List can not be instantiated where Arraylist can be instantiate.
+	
+	8. The List creates a static array, and the ArrayList creates a dynamic array for storing the objects.
+	   So the List can not be expanded once it is created but using the ArrayList, we can expand the array when needed.
     
     
     
