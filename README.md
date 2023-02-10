@@ -952,6 +952,39 @@
 
 ![image](https://user-images.githubusercontent.com/35212651/218006529-d084d35b-7693-475d-a8d5-7351424c39e2.png)
 
+**64. Java HashSet ?**
+
+	Java HashSet class is used to create a collection that uses a hash table for storage. It inherits the AbstractSet class and implements Set interface.
+
+	The important points about Java HashSet class are:
+
+	HashSet stores the elements by using a mechanism called hashing.
+	HashSet contains unique elements only.
+	HashSet allows null value.
+	HashSet class is non synchronized.
+	HashSet doesn't maintain the insertion order. Here, elements are inserted on the basis of their hashcode.
+	HashSet is the best approach for search operations.
+	The initial default capacity of HashSet is 16, and the load factor is 0.75.
+	
+	Java HashSet Example
+	
+	class HashSet1{  
+ 		public static void main(String args[]){  
+  			//Creating HashSet and adding elements  
+    			HashSet<String> set=new HashSet();  
+           		set.add("One");    
+           		set.add("Two");    
+           		set.add("Three");   
+           		set.add("Four");  
+           		set.add("Five");  
+           		Iterator<String> i=set.iterator();  
+           		while(i.hasNext())  
+           		{  
+           			System.out.println(i.next());  
+           		}  
+ 		}  
+	}  
+
     
     
     
