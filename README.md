@@ -986,5 +986,69 @@
 	}  
 
     
+**65. Java LinkedHashSet Class ?**
+
+	Java LinkedHashSet class is a Hashtable and Linked list implementation of the Set interface. 
+	It inherits the HashSet class and implements the Set interface.
+
+	The important points about the Java LinkedHashSet class are:
+
+	Java LinkedHashSet class contains unique elements only like HashSet.
+	Java LinkedHashSet class provides all optional set operations and permits null elements.
+	Java LinkedHashSet class is non-synchronized.
+	Java LinkedHashSet class maintains insertion order.
+	
+	class LinkedHashSet1{  
+ 		public static void main(String args[]){  
+ 			//Creating HashSet and adding elements  
+        		LinkedHashSet<String> set=new LinkedHashSet();  
+               		set.add("One");    
+               		set.add("Two");    
+               		set.add("Three");   
+               		set.add("Four");  
+               		set.add("Five");  
+               		Iterator<String> i=set.iterator();  
+               		while(i.hasNext())  
+               		{  
+               			System.out.println(i.next());  
+               		}  
+ 		}  
+	}
+	
+	
+**66. Java HashMap ?**
+
+	Java HashMap class implements the Map interface which allows us to store key and value pair, where keys should be unique. 
+	If you try to insert the duplicate key, it will replace the element of the corresponding key. It is easy to perform 
+	operations using the key index like updation, deletion, etc. HashMap class is found in the java.util package.
+
+	HashMap in Java is like the legacy Hashtable class, but it is not synchronized. It allows us to store the null elements as well, 
+	but there should be only one null key. Since Java 5, it is denoted as HashMap<K,V>, where K stands for key and V for value. 
+	It inherits the AbstractMap class and implements the Map interface.
+
+	Points to remember
+	Java HashMap contains values based on the key.
+	Java HashMap contains only unique keys.
+	Java HashMap may have one null key and multiple null values.
+	Java HashMap is non synchronized.
+	Java HashMap maintains no order.
+	The initial default capacity of Java HashMap class is 16 with a load factor of 0.75.
+	
+	Example : 
+	
+	public class HashMapExample1{  
+ 		public static void main(String args[]){  
+   		HashMap<Integer,String> map=new HashMap<Integer,String>();//Creating HashMap    
+   		map.put(1,"Mango");  //Put elements in Map  
+   		map.put(2,"Apple");    
+   		map.put(3,"Banana");   
+   		map.put(4,"Grapes");   
+       
+   		System.out.println("Iterating Hashmap...");  
+   		for(Map.Entry m : map.entrySet()){    
+    			System.out.println(m.getKey()+" "+m.getValue());    
+   		}  
+		}  
+	}  
     
     
