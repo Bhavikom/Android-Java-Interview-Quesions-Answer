@@ -939,6 +939,13 @@
 	
 	8. The List creates a static array, and the ArrayList creates a dynamic array for storing the objects.
 	   So the List can not be expanded once it is created but using the ArrayList, we can expand the array when needed.
+	   
+**62. what is LinkedList in Java ?**
+
+	Linked List is a part of the Collection framework present in java.util package. This class is an implementation 
+	of the LinkedList data structure which is a linear data structure where the elements are not stored in contiguous 
+	locations and every element is a separate object with a data part and address part. The elements are linked using 
+	pointers and addresses. Each element is known as a node. 
     
     
     
