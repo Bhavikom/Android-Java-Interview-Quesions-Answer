@@ -1222,3 +1222,29 @@
 			}  
 		} 
 	}
+	
+**72. Java Queue Interface ?**
+
+	The interface Queue is available in the java.util package and does extend the Collection interface. It is used to keep the 
+	elements that are processed in the First In First Out (FIFO) manner. It is an ordered list of objects, where insertion of 
+	elements occurs at the end of the list, and removal of elements occur at the beginning of the list.
+
+	Being an interface, the queue requires, for the declaration, a concrete class, and the most common classes are the LinkedList 
+	and PriorityQueue in Java. Implementations done by these classes are not thread safe. If it is required to have a thread safe 
+	implementation,PriorityBlockingQueue is an available option.
+	
+	* Features of a Queue
+	
+	The following are some important features of a queue.
+
+	1.As discussed earlier, FIFO concept is used for insertion and deletion of elements from a queue.
+	2.The Java Queue provides support for all of the methods of the Collection interface including deletion, insertion, etc.
+	3.PriorityQueue, ArrayBlockingQueue and LinkedList are the implementations that are used most frequently.
+	4.The NullPointerException is raised, if any null operation is done on the BlockingQueues.
+	5.Those Queues that are present in the util package are known as Unbounded Queues.
+	6.Those Queues that are present in the util.concurrent package are known as bounded Queues.
+	7.All Queues barring the Deques facilitates removal and insertion at the head and tail of the queue; respectively.
+	  In fact, deques support element insertion and removal at both ends.
+	
+	
+	
