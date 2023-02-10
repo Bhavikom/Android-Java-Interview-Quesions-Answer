@@ -910,36 +910,7 @@
       		System.out.println(list);  
  		}  
 	}  
-
-	
-**61. differences between List and ArrayList in Java ?**
-
-	1.One of the major differences is that List is an interface and ArrayList is a class of Java Collection framework.
-	
-	2.The List extends the collection framework, comparatively ArrayList extends AbstractList class and implements the List interface.
-	
-	3.The namespace for the List and ArrayList is System.Collection.Generic and System Collection, respectively.
-	
-	4.List stores elements in a sequence and are identified by the individual index number. 
-	  Comparatively, ArrayList stores the elements in a dynamic array; it can grow when required.
-	  
-	5. When we define the List as follows:
-
-		List myList = new ArrayList();  
-		It means we can only call the methods and reference members from the List interface.
-
-		If we define the ArrayList as follows:
-
-		ArrayList myList = new ArrayList();  
-		It means we can invoke available methods in ArrayList and use its members in addition to the List.
- 
-	6. List provides faster manipulation of objects where Arraylist provides slow manipulation on objects compared to List.
-	
-	7. List can not be instantiated where Arraylist can be instantiate.
-	
-	8. The List creates a static array, and the ArrayList creates a dynamic array for storing the objects.
-	   So the List can not be expanded once it is created but using the ArrayList, we can expand the array when needed.
-	   
+   
 **62. what is LinkedList in Java ?**
 
 	Linked List is a part of the Collection framework present in java.util package. This class is an implementation 
@@ -947,12 +918,7 @@
 	locations and every element is a separate object with a data part and address part. The elements are linked using 
 	pointers and addresses. Each element is known as a node. 
 	
-**63. Difference between Arraylist and LinkedList in Java ?**
-
-
-![image](https://user-images.githubusercontent.com/35212651/218006529-d084d35b-7693-475d-a8d5-7351424c39e2.png)
-
-**64. Java HashSet ?**
+**63. Java HashSet ?**
 
 	Java HashSet class is used to create a collection that uses a hash table for storage. It inherits the AbstractSet class and implements Set interface.
 
@@ -986,7 +952,7 @@
 	}  
 
     
-**65. Java LinkedHashSet Class ?**
+**64. Java LinkedHashSet Class ?**
 
 	Java LinkedHashSet class is a Hashtable and Linked list implementation of the Set interface. 
 	It inherits the HashSet class and implements the Set interface.
@@ -1016,7 +982,7 @@
 	}
 	
 	
-**66. Java HashMap ?**
+**65. Java HashMap ?**
 
 	Java HashMap class implements the Map interface which allows us to store key and value pair, where keys should be unique. 
 	If you try to insert the duplicate key, it will replace the element of the corresponding key. It is easy to perform 
@@ -1051,7 +1017,7 @@
 		}  
 	}  
     
-**67. Java Hashtable class ?**
+**66. Java Hashtable class ?**
 
 	Java Hashtable class implements a hashtable, which maps keys to values. It inherits Dictionary class and implements the Map interface.
 
@@ -1078,7 +1044,7 @@
  		}  
 	}  
 	
-**68. Java EnumSet class ?**
+**67. Java EnumSet class ?**
 
 	Java EnumSet class is the specialized Set implementation for use with enum types. It inherits AbstractSet class and implements the Set interface.
 	
@@ -1098,7 +1064,7 @@
   		}  
 	}  
 	
-**69. Java EnumMap class ?**
+**68. Java EnumMap class ?**
 
 	Java EnumMap class is the specialized Map implementation for enum keys. It inherits Enum and AbstractMap classes
 	
@@ -1123,7 +1089,7 @@
    		}  
 	}  
 	
-**70. Java Vector class ?**
+**69. Java Vector class ?**
 
 	Vector is like the dynamic array which can grow or shrink its size. Unlike array, we can store n-number of elements in it as 
 	there is no size limit. It is a part of Java Collection framework since Java 1.2. It is found in the java.util package and 
@@ -1159,7 +1125,7 @@
        		}  
 	}  
     
-**71. Java Stack ?**
+**70. Java Stack ?**
 
 	The stack is a linear data structure that is used to store the collection of objects. It is based on Last-In-First-Out (LIFO). 
 	Java collection framework provides many interfaces and classes to store the collection of objects. One of them is the Stack 
@@ -1223,7 +1189,7 @@
 		} 
 	}
 	
-**72. Java Queue Interface ?**
+**71. Java Queue Interface ?**
 
 	The interface Queue is available in the java.util package and does extend the Collection interface. It is used to keep the 
 	elements that are processed in the First In First Out (FIFO) manner. It is an ordered list of objects, where insertion of 
@@ -1245,6 +1211,39 @@
 	6.Those Queues that are present in the util.concurrent package are known as bounded Queues.
 	7.All Queues barring the Deques facilitates removal and insertion at the head and tail of the queue; respectively.
 	  In fact, deques support element insertion and removal at both ends.
+	  
+**72. differences between List and ArrayList in Java ?**
+
+	1.One of the major differences is that List is an interface and ArrayList is a class of Java Collection framework.
+	
+	2.The List extends the collection framework, comparatively ArrayList extends AbstractList class and implements the List interface.
+	
+	3.The namespace for the List and ArrayList is System.Collection.Generic and System Collection, respectively.
+	
+	4.List stores elements in a sequence and are identified by the individual index number. 
+	  Comparatively, ArrayList stores the elements in a dynamic array; it can grow when required.
+	  
+	5. When we define the List as follows:
+
+		List myList = new ArrayList();  
+		It means we can only call the methods and reference members from the List interface.
+
+		If we define the ArrayList as follows:
+
+		ArrayList myList = new ArrayList();  
+		It means we can invoke available methods in ArrayList and use its members in addition to the List.
+ 
+	6. List provides faster manipulation of objects where Arraylist provides slow manipulation on objects compared to List.
+	
+	7. List can not be instantiated where Arraylist can be instantiate.
+	
+	8. The List creates a static array, and the ArrayList creates a dynamic array for storing the objects.
+	   So the List can not be expanded once it is created but using the ArrayList, we can expand the array when needed.
+	   
+**73. Difference between Arraylist and LinkedList in Java ?**
+
+
+![image](https://user-images.githubusercontent.com/35212651/218006529-d084d35b-7693-475d-a8d5-7351424c39e2.png)
 	
 	
 	
