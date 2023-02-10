@@ -949,7 +949,9 @@
 	
 **63. Difference between Arraylist and LinkedList in Java ?**
 
-	1.Arraylist : This class uses a dynamic array to store the elements in it. With the introduction of generics, this class supports the storage of all types of objects.
+
+![image](https://user-images.githubusercontent.com/35212651/218006529-d084d35b-7693-475d-a8d5-7351424c39e2.png)
+
     
     
     
