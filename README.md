@@ -1244,6 +1244,34 @@
 
 
 ![image](https://user-images.githubusercontent.com/35212651/218006529-d084d35b-7693-475d-a8d5-7351424c39e2.png)
+
+**74. Difference between ArrayList and Vector ?**
+
+	ArrayList and Vector both implements List interface and maintains insertion order.
+	
+	
+![image](https://user-images.githubusercontent.com/35212651/218253792-d79ab357-0571-464c-9799-a871e1b5b774.png)
+
+**75. Difference between HashMap and Hashtable ?**
+
+	HashMap and Hashtable both are used to store data in key and value form. Both are using hashing technique to store unique keys.
+
+	But there are many differences between HashMap and Hashtable classes that are given below.
+	
+	
+![image](https://user-images.githubusercontent.com/35212651/218253982-35413b1b-c01b-42f7-b6c1-0503136b9fa6.png)
+
+**76. Difference between Comparable and Comparator ?**
+
+	Comparable and Comparator both are interfaces and can be used to sort collection elements.
+
+	However, there are many differences between Comparable and Comparator interfaces that are given below.
+	
+	
+![image](https://user-images.githubusercontent.com/35212651/218254115-8ca34566-e0c3-4663-b415-6ecd4f122b44.png)
+
+
+
 	
 	
 	
