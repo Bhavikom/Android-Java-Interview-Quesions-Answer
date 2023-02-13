@@ -1270,6 +1270,30 @@
 	
 ![image](https://user-images.githubusercontent.com/35212651/218254115-8ca34566-e0c3-4663-b415-6ecd4f122b44.png)
 
+**77. Java object class ?**
+
+	The Object class is the parent class of all the classes in java by default. In other words, it is the topmost class of java.
+
+	The Object class is beneficial if you want to refer any object whose type you don't know. Notice that parent class reference 
+	variable can refer the child class object, know as upcasting.
+
+	Let's take an example, there is getObject() method that returns an object but it can be of any type like Employee,Student etc, 
+	we can use Object class reference to refer that object. For example:
+
+	Object obj=getObject();//we don't know what object will be returned from this method  
+	The Object class provides some common behaviors to all the objects such as object can be compared, object can be cloned, 
+	object can be notified etc.
+	
+	The Object class provides multiple methods which are as follows:
+
+	1.tostring() method
+	2.hashCode() method
+	3.equals(Object obj) method
+	4.finalize() method
+	5.getClass() method
+	6.clone() method
+	7.wait(), notify() notifyAll() methods
+
 
 
 	
