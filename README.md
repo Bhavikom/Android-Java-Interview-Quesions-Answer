@@ -405,15 +405,36 @@
         }
     }
     
-**36. Difference between StringBuffer and StringBuilder ?**
+**36. Difference between String,StringBuffer and StringBuilder ?**
 
     Java provides three classes to represent a sequence of characters: String, StringBuffer, and StringBuilder. 
     The String class is an immutable class whereas StringBuffer and StringBuilder classes are mutable. 
     There are many differences between StringBuffer and StringBuilder. The StringBuilder class is introduced since JDK 1.5.
 
-    A list of differences between StringBuffer and StringBuilder is given below:
+	String vs StringBuffer
+	
+	Since String is immutable in Java, whenever we do String manipulation like concatenation, substring, etc. it generates a 
+	new String and discards the older String for garbage collection. These are heavy operations and generate a lot of garbage 
+	in heap. So Java has provided StringBuffer and StringBuilder classes that should be used for String manipulation. 
+	StringBuffer and StringBuilder are mutable objects in Java. They provide append(), insert(), delete(), 
+	and substring() methods for String manipulation.
 
-    ![image](https://user-images.githubusercontent.com/35212651/215666751-b3f801df-f61a-4757-988c-048aae4f4dd6.png)
+	StringBuffer vs StringBuilder
+	
+	StringBuffer was the only choice for String manipulation until Java 1.4. But, it has one disadvantage that all of its public 
+	methods are synchronized. StringBuffer provides Thread safety but at a performance cost. In most of the scenarios, we don’t use 
+	String in a multithreaded environment. So Java 1.5 introduced a new class StringBuilder, which is similar to StringBuffer 
+	except for thread-safety and synchronization. StringBuffer has some extra methods such as substring, length, capacity, 
+	trimToSize, etc. However, these are not required since you have all these present in String too. That’s why these methods 
+	were never implemented in the StringBuilder class. StringBuffer was introduced in Java 1.0 whereas StringBuilder class was 
+	introduced in Java 1.5 after looking at shortcomings of StringBuffer. If you are in a single-threaded environment or don’t care 
+	about thread safety, you should use StringBuilder. Otherwise, use StringBuffer for thread-safe operations.
+	
+ A list of differences between StringBuffer and StringBuilder is given below:
+
+ ![image](https://user-images.githubusercontent.com/35212651/215666751-b3f801df-f61a-4757-988c-048aae4f4dd6.png)
+ 
+ 	
 
 **37. What is the difference between fail-fast and fail-safe iterators in Java ?**
 
