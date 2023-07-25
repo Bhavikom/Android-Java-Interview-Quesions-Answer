@@ -92,15 +92,35 @@
     
 **10. Why the main () method in Java is always static ?**
 
-    Java main() method is always static, so that compiler can call it without the creation of an object or before the creation of an object of the class.
+    The main() method is the first method you will encounter when studying Java programming and is a standard method that the JVM uses to begin the execution of any Java application. There is no object of the class existing when the Java runtime starts. This is why the main() method must be static for the JVM to load the class into memory and call the main function. If the main method is not static, JVM will be unable to call it since no object of the class is present.
 
-    In any Java program, the main() method is the starting point from where compiler starts program execution. 
-    So, the compiler needs to call the main() method.
-    If the main() is allowed to be non-static, then while calling the main() method JVM has to instantiate its class.
-    While instantiating it has to call the constructor of that class, There will be ambiguity if the constructor of that class takes an argument.
-    Static method of a class can be called by using the class name only without creating an object of a class.
-    The main() method in Java must be declared public, static and void. If any of these are missing, the Java program will compile but a 
-    runtime error will be thrown.
+The main() method in Java programs is the point from which the program begins its execution, or simply the entrance point of Java programs. So, the compiler must call the main() method first.
+
+The JVM or java compiler looks for a public static void main(String args[]) method in that class, and the signature of the main method must be in a specified format for the JVM to recognize it as its entry point. If we update the method's signature, the program will throw the error NoSuchMethodError:main and terminate. As a result, it is one of the most significant Java methods, and a good understanding of it is essential.
+
+The java.exe program is used to execute the Java program. Java.exe subsequently makes JNI (Java Native Interface) calls, which load the JVM. The command line is parsed by java.exe, a new String array is created, and the main() method is called. The main method is attached to a daemon thread, which is destroyed only when the Java program terminates execution.
+
+It is not possible to change the syntax of the main() method. The one and only thing we can modify is the String array argument's name. The main() method has the following syntax:
+
+public static void main(String[] args){  
+}  
+
+The main() method should be declared static so that the JVM (Java Virtual Machine) can call it without having to create an instance of the class containing the main() method. An instance of a class in java is the object of that class itself. It is sometimes referred to as a class instance or a class object. An instance is a single object of a specific class. For example, an object obj that belongs to the class Circle is an instance (object) of the class Circle.
+If the main method is not declared static, the JVM has to create an instance of the main Class, and because the constructor might be overloaded and include arguments, there will be no reliable and consistent way for the JVM to find the main method in Java.
+Anything specified in a Java class is of the reference type and must be generated before being used. At the same time, static methods and static data are loaded into a separate memory inside the JVM called context, which is created when a class is loaded. The JVM context will load the main method if it is static, making it available for execution.
+Example:
+
+class Test {
+    public static void main(String[] args) {
+        //Call static method of Java class using class name only
+        Java.getInfo();
+    }
+}
+class Java {
+   public static void getInfo() { //static method
+      System.out.println("The main method in java should always be declared static.");
+   }
+}
     
 **11. How to prevent a class to be extended ?**
 
